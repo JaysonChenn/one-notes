@@ -1,0 +1,8 @@
+{
+  "backgroundColor": "#f7f8fa",
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group"
+  }
+}

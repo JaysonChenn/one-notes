@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- note -->
+  <view class="w-100" wx:if="{{ tabbarActive === 0 }}">
+    <view class="header">
+      <image class="inset" src="../../assets/img/city_bg.png"></image>
+      <view class="info">
+        <view class="name">{{userInfo.nickName}}</view>
+        <view class="title">便签数</view>
+        <view class="num">0</view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="empty" wx:if="{{!havaNote}}">
+        <image class="empty-icon" src="../../assets/img/empty.png"></image>
+        <view class="empty-text">还没有写便签，快去写一条吧</view>
+      </view>
+      <view class="note-list">
+        <view class="note" wx:for="{{6}}">
+
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- my -->
+  <view class="w-100" wx:elif="{{ tabbarActive === 2 }}">
+    <view class="header">
+      <van-image
+        round
+        width="65"
+        height="65"
+        src="{{userInfo.avatarUrl}}"
+      />
+      <view class="nickName">{{userInfo.nickName}}</view>
+    </view>
+    <view class="content">
+      <van-cell-group>
+        <van-cell title="回收站" is-link />
+        <van-cell title="意见与反馈" is-link />
+        <van-cell title="设置" is-link />
+      </van-cell-group>
+    </view>
+  </view>
+</view>
+
+<!-- tabbar -->
+<van-tabbar active="{{ tabbarActive }}" bind:change="onChange">
+  <van-tabbar-item icon="bookmark-o">便签</van-tabbar-item>
+  <van-tabbar-item>
+    <view class="tabbar-add-box">
+      <image class="tabbar-add-icon" slot="icon" src="../../assets/img/add.png" />
+    </view>
+  </van-tabbar-item>
+  <van-tabbar-item icon="smile-o">我的</van-tabbar-item>
+</van-tabbar>

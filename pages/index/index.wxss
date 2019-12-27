@@ -1,0 +1,97 @@
+/**index.wxss**/
+.header {
+  height: 300rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  color: #fff;
+  background: #509AFF;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.header .inset {
+  height: 85%;
+  width: 65%;
+  position: absolute;
+  right: 20px;
+  bottom: 0
+}
+
+.header .info {
+  position: absolute;
+  top: 20rpx;
+  left: 35rpx;
+}
+
+.header .title {
+  font-size: 11px;
+}
+
+.header .name {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.header .num {
+  font-size: 35px;
+  font-weight: bold
+}
+
+.header .nickName {
+  font-size: 16px;
+  color: #fff
+}
+
+.content {
+  margin-top: 150px
+}
+
+.content .empty {
+  text-align: center
+}
+
+.content .empty .empty-icon {
+  height: 70px;
+  width: 110px;
+  margin: 80px 0 15px 0
+}
+
+.content .empty .empty-text {
+  font-size: 12px;
+  color: gray;
+}
+
+.content .note-list {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.content .note-list .note {
+  height: 40px;
+  width: 90%;
+  color: #509AFF;
+  background: #fff;
+  margin: 15px auto 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  border-left: 5px solid red
+}
+
+.tabbar-add-box {
+  width: 34px;
+  height: 34px;
+  background: #509AFF;
+  display: block;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.tabbar-add-icon {
+  width: 14px;
+  height: 14px
+}
